@@ -88,7 +88,7 @@ Pre-requisites:
 
 To compile the tool:
 ```
-# gcc -o force_dell_tbt force_dell_tbt.c -I /usr/include/efivar/ -lsmbios_c
+# gcc -o force_dell_tbt force_dell_tbt.c -I /usr/include/efivar/ -lsmbios_c -lefivar
 ```
 
 To force flashing mode:
