@@ -1,3 +1,6 @@
+Important: If you have an XPS 9360, check your model ID.
+There are two variants. 
+
 | Platform       | Model ID | NVM Version |
 |----------------|----------|-------------|
 | Latitude 7275  | 0x06D6   | 16          |
@@ -11,3 +14,4 @@
 | XPS 9350       | 0x0704   | 16          |
 | Latitude 7370  | 0x071B   | 16          |
 | XPS 9360       | 0x075B   | 21          |
+| XPS 9360       | 0x082A   | 21          |
