@@ -1,4 +1,5 @@
-Important: If you have an XPS 9360, check your model ID.
+Important: If you have an XPS 9360, check your model ID with
+```cat /sys/bus/thunderbolt/devices/0-0/device```
 There are two variants. 
 
 | Platform       | Model ID | NVM Version |
