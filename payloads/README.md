@@ -16,3 +16,6 @@ There are two variants.
 | Latitude 7370  | 0x071B   | 16          |
 | XPS 9360       | 0x075B   | 21          |
 | XPS 9360       | 0x082A   | 21          |
+
+Payloads can be extracted from the windows firmware updater
+via `7z e $NVM_FW_UPDATER.exe`.
