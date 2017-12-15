@@ -1,11 +1,11 @@
 Thunderbolt NVM updates for Linux
 =====
-This repository contains payloads that for updating the Thunderbolt NVM on select Dell systems.
+This repository contains information on updating Thunderbolt NVM on applicable Dell systems.
 
 Why
 ---
-Although tools are available in the kernel and [fwupd](https://github.com/hughsie/fwupd), payloads 
-aren't yet released onto LVFS in .CAB form.
+Tools are available in the kernel and [fwupd](https://github.com/hughsie/fwupd).
+Some payloads are released onto LVFS in .CAB form.
 
 How
 ---
@@ -14,6 +14,14 @@ Fwupd 0.9.7 or later are needed to safely process updates from userspace.
 
 Kernel 4.15 and later include a special driver for waking up sleeping thunderbolt controllers.
 Fwupd 1.0.0 and later include the userspace support necessarily for using this driver.
+
+Currently payloads are posted to LVFS testing. To use them, you will need to activate the
+LVFS testing remote.
+To do this, modify:
+```
+/etc/lvfs/remotes.d/lvfs-testing.conf
+```
+Set `Enabled` to `true`.
 
 Usage
 ---
@@ -25,12 +33,14 @@ device to wake it up and try again.
 If you don't have a Thunderbolt device, it's also possible to force the controller into
 flash mode to wake it up using a utility that is on this repository or a newer kernel/fwupd.
 
-To build a CAB file from these payloads, refer to the firmware packager available here:
-https://github.com/hughsie/fwupd/tree/master/contrib/firmware-packager
-
 It's important that the controller stay awake during this time. If you woke it using
 another device, leave that device plugged in until the update is done.
 If you woke it using the Dell force tool or kernel driver then you don't need to do anything.
+
+Bugs
+---
+If an NVM is missing or you run into a problem, you can report it here or with the fwupd
+project.
 
 Dell Force Tool
 ---
